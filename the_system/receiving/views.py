@@ -10,7 +10,7 @@ def home_page(request):
 
 def receiving_monitoring(request):
     
-    return render(request, 'receiving_body.html')
+    return render(request, 'receiving_monitoring.html')
 
 def received_po(request):
     
