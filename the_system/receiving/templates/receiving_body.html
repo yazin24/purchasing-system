@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Receiving</title>
+</head>
+<body>
+
+    <ul class="flex flex-row bg-gray-900 text-gray-200 justify-center gap-12 p-6">
+        <li>Home</li>
+        <li>Receiving Monitoring</li>
+        <li>Received P.O</li>
+        <li>Items</li>
+        <li>Undelivered</li>
+    </ul>
+    
+ <div>
+    {% block content %}
+        <!-- all pages will be rendered here -->
+    {%endblock%}
+ </div>   
+
+
+</body>
+</html>
