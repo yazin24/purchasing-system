@@ -9,10 +9,10 @@
 <body>
 
     <ul class="flex flex-row bg-gray-900 text-gray-200 justify-center gap-12 p-6">
-        <li>Home</li>
-        <li>Items Monitoring</li>
-        <li>Suppliers</li>
-        <li>Receiving History</li>
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'itemsmonitoring' %}">Items Monitoring</a></li>
+        <li><a href="{% url 'suppliers' %}">Suppliers</a></li>
+        <li><a href="{% url 'receivinghistory' %}">Receiving History</a></li>
         <!-- <li>Products</li> -->
     </ul>
     
