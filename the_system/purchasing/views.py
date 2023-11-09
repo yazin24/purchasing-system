@@ -4,22 +4,22 @@ def main_page(request):
     
     return render(request, 'main_body.html')
 
-def home_page(request):
+def purchasing_home_page(request):
     
     return render(request, 'home_purchasing.html')
 
-def add_po(request):
+def purchasing_add_po(request):
     
     return render(request, 'add_p.o.html')
 
-def purchase_monitoring(request):
+def purchasing_purchase_monitoring(request):
     
     return render(request, 'purchase_monitoring.html')
 
-def suppliers(request):
+def purchasing_suppliers(request):
     
     return render(request, 'suppliers.html')
 
-def products(request):
+def purchasing_products(request):
     
     return render(request, 'products.html')
