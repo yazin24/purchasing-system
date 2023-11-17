@@ -8,17 +8,17 @@
 </head>
 <body>
 
-    <div class="bg-gray-900 h-12">
+    <div class="bg-blue-900 h-12 border">
 
     </div>
     <div class="flex flex-row gap-8">
-    <div>
-        <ul class="flex flex-col bg-gray-900 text-gray-200 justify-start p-6 gap-12">
-            <li><a href="{% url 'purchasinghomepage' %}">Home</a></li>
-            <li><a href="{% url 'purchasingaddpo' %}">Make P.O</a></li>
-            <li><a href="{% url 'purchasingpurchasemonitoring' %}">Purchase Monitoring</a></li>
-            <li><a href="{% url 'purchasingsuppliers' %}">Suppliers</a></li>
-            <li><a href="{% url 'purchasingproducts' %}">Products</a></li>
+    <div class="h-screen border">
+        <ul class="flex flex-col h-screen bg-blue-900 justify-start p-6 gap-12 font-semibold">
+            <li class="hover:text-gray-200"><a href="{% url 'purchasinghomepage' %}">Home</a></li>
+            <li class="hover:text-gray-200"><a href="{% url 'purchasingaddpo' %}">Make P.O</a></li>
+            <li class="hover:text-gray-200"><a href="{% url 'purchasingpurchasemonitoring' %}">Purchase Monitoring</a></li>
+            <li class="hover:text-gray-200"><a href="{% url 'purchasingsuppliers' %}">Suppliers</a></li>
+            <li class="hover:text-gray-200"><a href="{% url 'purchasingproducts' %}">Products</a></li>
         </ul>
     </div>
     
