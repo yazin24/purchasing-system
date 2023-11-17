@@ -11,19 +11,19 @@
     <div class="bg-blue-900 h-12 border">
 
     </div>
-    <div class="flex flex-row gap-8">
-    <div class="h-screen border">
+    <div class="flex flex-row gap-8 w-auto">
+    <div class="min-h-screen border">
         <ul class="flex flex-col h-screen bg-blue-900 justify-start p-6 gap-12 font-semibold">
-            <li class="hover:text-gray-200"><a href="{% url 'purchasinghomepage' %}">Home</a></li>
-            <li class="hover:text-gray-200"><a href="{% url 'purchasingaddpo' %}">Make P.O</a></li>
-            <li class="hover:text-gray-200"><a href="{% url 'purchasingpurchasemonitoring' %}">Purchase Monitoring</a></li>
-            <li class="hover:text-gray-200"><a href="{% url 'purchasingsuppliers' %}">Suppliers</a></li>
-            <li class="hover:text-gray-200"><a href="{% url 'purchasingproducts' %}">Products</a></li>
+            <li class="hover:text-gray-200 w-48"><a href="{% url 'purchasinghomepage' %}">Home</a></li>
+            <li class="hover:text-gray-200 w-48"><a href="{% url 'purchasingaddpo' %}">Make P.O</a></li>
+            <li class="hover:text-gray-200 w-48"><a href="{% url 'purchasingpurchasemonitoring' %}">Purchase Monitoring</a></li>
+            <li class="hover:text-gray-200 w-48"><a href="{% url 'purchasingsuppliers' %}">Suppliers</a></li>
+            <li class="hover:text-gray-200 w-48"><a href="{% url 'purchasingproducts' %}">Products</a></li>
         </ul>
     </div>
     
     
- <div class="mt-8">
+ <div class="mt-6 md:mr-6 w-full">
     {% block content %}
         <!-- all pages will be rendered here -->
     {%endblock%}

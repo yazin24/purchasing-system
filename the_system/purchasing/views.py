@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_list_or_404
 
+#purchasing navbar
 def main_page(request):
     
     return render(request, 'main_body.html')
@@ -23,3 +24,9 @@ def purchasing_suppliers(request):
 def purchasing_products(request):
     
     return render(request, 'products.html')
+
+#purchasing functions 
+
+def supplier_form(request):
+    
+    return render(request, 'add_supplier_form.html')

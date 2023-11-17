@@ -3,7 +3,33 @@
 {% block content %}
 
 <div>
-    <h2>Suppliers</h2>
-</div>
+    <div class="flex flex-row justify-between">
+        <h2 class="font-semibold">Suppliers List</h2>
+        <button class="text-xs bg-yellow-400 p-1 rounded-sm hover:bg-yellow-500 text-gray-200 font-semibold"><a href="{% url 'supplierform' %}">Add New</a></button>
+    </div>
+    <div class="bg-white-900 text-gray-900 mt-1">
+        <table class="bg-yellow-100 shadow-lg w-full">
+            <thead class="">
+                <tr class="bg-yellow-500 border-b-1 text-gray-200 md:h-12">
+                    <th class="text-xs md:font-bold text-center">ID NUMBER</th>
+                    <th class="text-xs text-center">SUPPLIER NAME</th>
+                    <th class="text-xs text-center hidden md:table-cell">CONTACT PERSON</th>
+                    <th class="text-xs text-center hidden md:table-cell">CONTACT NUMBER</th>
+                    <th class="text-xs text-center">DETAILS</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr class="h-10">
+                    <td class="border-b-2 text-xs text-center">1</td>
+                    <td class="border-b-2 text-xs text-center">Sample</td>
+                    <td class="border-b-2 text-xs text-center hidden md:table-cell">juan dela cruz</td>
+                    <td class="border-b-2 text-xs text-center hidden md:table-cell">09283877372</td>
+                    <td class="border-b-2 text-xs text-center capitalize text-red-500 hover:underline"><button><a href="{% url 'supplierform' %}">View</a></button></td>
+                 
+            </tbody>
+        </table>
+    </div>
+
 
 {% endblock %}
