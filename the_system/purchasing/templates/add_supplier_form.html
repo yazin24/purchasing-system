@@ -43,9 +43,40 @@
   </div>
   
   <div class="ml-4">
-    <button class="bg-green-500 p-1 rounded-sm text-gray-200 mt-2 text-xs">New Item</button>
+    <button class="item-button bg-green-500 p-1 rounded-sm text-gray-200 mt-2 text-xs">New Item</button>
   </div>
 
 </div>
+
+<script>
+  $(document).ready(function()
+  {
+    var newItemCount = 1;
+
+    function addNewItem() {
+      var newItem = `
+                <div class="w-full px-4 flex flex-row gap-1 mt-2">
+                    <input type="text" class="bg-yellow-100 w-full rounded-sm border w-1/3 flex-1" placeholder="Item Name">
+                    <input type="number" class="bg-yellow-100 w-full rounded-sm border w-1/3 flex-1" placeholder="Amount">
+                    <select class="w-1/3 flex-1">
+                        <option disabled selected class="text-xs">Unit Measurement</option>
+                        <option>Kg</option>
+                        <option>L</option>
+                        <option>g</option>
+                    </select>
+                </div>
+            `;
+
+            $('.item-button').before(newItem);
+
+            newItemCount++;
+    }
+
+    $('.item-button').on('click', function() {
+            addNewItem();
+        });
+
+  })
+</script>
 
 {% endblock %}
