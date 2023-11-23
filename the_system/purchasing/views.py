@@ -43,7 +43,7 @@ def add_supplier(request):
         
         item_forms = [ItemForm(request.POST, prefix=f'item_{i}') for i in range(1, int(request.POST.get('item_count')) +1 )]
         
-        if not all(item_forms.is_valid() for item_form in item_forms):
+        if not all(item_form.is_valid() for item_form in item_forms):
             return HttpResponseBadRequest('Invalid item data. Please try again.')
         
         

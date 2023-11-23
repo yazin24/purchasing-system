@@ -73,6 +73,12 @@
       `;
 
       $('#item_container').append(newItem);
+
+       // Add the item_count attribute to the newly added item fields
+  $('#item_container').find(`[name^="item_name_${newItemCount}"]`).attr('item_count', newItemCount);
+  $('#item_container').find(`[name^="item_amount_${newItemCount}"]`).attr('item_count', newItemCount);
+  $('#item_container').find(`[name^="item_unit_${newItemCount}"]`).attr('item_count', newItemCount);
+
       newItemCount++;
     }
 
