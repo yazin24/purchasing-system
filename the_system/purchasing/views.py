@@ -50,8 +50,10 @@ def add_supplier(request):
         supplier = supplier_form.save()
         
         for item_form in item_forms:
-            item = item_form.save()
-            supplier.supplier_items.add(item)
+            item = item_form.save(commit=False)
+            item.supplier = supplier
+            item.save()
+            
             
         return redirect('purchasingsuppliers')
     

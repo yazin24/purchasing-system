@@ -15,5 +15,6 @@ urlpatterns = [
     # url for functions
     
     path('suppliers/supplier-form/', views.supplier_form, name = 'supplierform'),
+    path('suppliers/supplier-form/add-now/', views.add_supplier, name = 'addsupplier'),
     
 ]
