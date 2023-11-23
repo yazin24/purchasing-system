@@ -41,3 +41,20 @@ def add_supplier(request):
         if not supplier_form.is_valid():
             return HttpResponseBadRequest('Invalid supplier data. Please try again.')
         
+        item_forms = [ItemForm(request.POST, prefix=f'item_{i}') for i in range(1, int(request.POST.get('item_count')) +1 )]
+        
+        if not all(item_forms.is_valid() for item_form in item_forms):
+            return HttpResponseBadRequest('Invalid item data. Please try again.')
+        
+        
+        supplier = supplier_form.save()
+        
+        for item_form in item_forms:
+            item = item_form.save()
+            supplier.supplier_items.add(item)
+            
+        return redirect('purchasingsuppliers')
+    
+    else:
+        return redirect('supplierform')
+        
