@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, get_list_or_404
+from django.http import HttpResponseBadRequest
+from .forms import SupplierForm, ItemForm
 
 #purchasing navbar
 def main_page(request):
@@ -30,3 +32,12 @@ def purchasing_products(request):
 def supplier_form(request):
     
     return render(request, 'add_supplier_form.html')
+
+def add_supplier(request):
+    if request.method == 'POST':
+        
+        supplier_form = SupplierForm(request.POST)
+        
+        if not supplier_form.is_valid():
+            return HttpResponseBadRequest('Invalid supplier data. Please try again.')
+        
